@@ -16,8 +16,8 @@ This project implements a Spring Boot application that interacts with the [Fake 
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/your-username/your-repository.git
-    cd your-repository
+    https://github.com/RADHIKESHS/CodingChallange.git
+    cd CodingChallange
     ```
 
 2. **Create and Configure MySQL Database:**
