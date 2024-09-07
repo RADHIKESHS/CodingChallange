@@ -29,6 +29,9 @@ This project implements a Spring Boot application that interacts with the [Fake 
       spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
       spring.datasource.username=your_database_username
       spring.datasource.password=your_database_password
+      spring.jpa.hibernate.ddl-auto=update
+      
+      publicapi.url=https://fakestoreapi.com
       ```
 
 3. **Build and Run the Application:**
