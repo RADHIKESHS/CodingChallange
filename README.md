@@ -107,7 +107,11 @@ This project implements a Spring Boot application that interacts with the [Fake 
         "price": 29.99,
         "description": "Product Description",
         "category": "jewelery",
-        "image": "http://example.com/image.jpg"
+        "image": "http://example.com/image.jpg",
+        "rating": {
+          "rate": 4.5,
+          "count": 120
+        }
       }
       // More products
     ]
@@ -120,26 +124,34 @@ This project implements a Spring Boot application that interacts with the [Fake 
 - **Request Body:**
 
     ```json
-    {
-      "title": "New Product",
-      "price": 99.99,
-      "description": "Description of the new product",
-      "category": "electronics",
-      "image": "http://example.com/image.jpg"
-    }
+      {
+        "id": 1,
+        "title": "Product Title",
+        "price": 29.99,
+        "description": "Product Description",
+        "category": "jewelery",
+        "image": "http://example.com/image.jpg",
+        "rating": {
+          "rate": 4.5,
+          "count": 120
+        }
+      }
     ```
 
 - **Response:**
 
     ```json
-    {
-      "id": 101,
-      "title": "New Product",
-      "price": 99.99,
-      "description": "Description of the new product",
-      "category": "electronics",
-      "image": "http://example.com/image.jpg"
-    }
+      {
+        "title": "Product Title",
+        "price": 29.99,
+        "description": "Product Description",
+        "category": "jewelery",
+        "image": "http://example.com/image.jpg",
+        "rating": {
+          "rate": 4.5,
+          "count": 120
+        }
+      }
     ```
 
 ## How to Test
