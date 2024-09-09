@@ -1,0 +1,11 @@
+Question: What are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+---Key things for API security and reliability:
+
+Auth: 			Secure endpoints using tokens (JWT/OAuth2).
+Validation: 		Sanitize inputs to avoid attacks.
+HTTPS: 			Always encrypt communication(Every request need jwt token in header).
+Error Handling: 	Use proper status codes, give clear errors.
+Versioning: 		Keep backward compatibility with versioning.
+Timeouts/Retries: 	Set timeouts to avoid hanging, retry failed calls.
+RestTemplate: 		Use for making GET/POST requests and configure timeouts.

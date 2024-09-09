@@ -1,0 +1,20 @@
+1. How will you tackle the challenge above?
+
+--> Tackling the challenge:  
+   First, I'd parse the CSV file into a 2D list, where each cell represents the data in the CSV. For any cell starting 	with `=`, I'd recognize it as a formula. I'd replace the cell references within the formula (e.g., `A1`, `B2`) 	with actual values from the CSV. Then, I'd evaluate the formula using GraalVM's JavaScript engine. Once the 	formula is evaluated, I'd store the result back in the cell. After processing all cells, I'd write the modified 	data back to a CSV file.
+
+2. What type of errors you would you check for?
+
+--> Types of errors to check for:  
+   	Invalid formulas: A formula that can't be evaluated due to syntax errors.
+   	Circular references: A formula that indirectly references itself, creating an infinite loop.
+   	Out-of-bounds references: A formula that refers to a cell outside the bounds of the CSV.
+   	Non-numeric data in numeric operations: Formulas expecting numbers but receiving non-numeric data.
+
+3. How might a user break your code?
+
+--> User can break the code:  
+   	Entering complex formulas that aren't supported by the JS engine, like advanced Excel functions.
+     	Using circular references, which could cause infinite loops if not properly detected.
+     	Inputting malformed CSV data with irregular formatting, which could throw off the parsing process.
+     	Referencing cells that contain text instead of numbers, which would cause the formula evaluation to fail.
